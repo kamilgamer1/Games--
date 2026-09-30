@@ -1,6 +1,6 @@
 const originalFetch = window.fetch;
 
-const cdnBaseUrl = "https://cdn.jsdelivr.net/gh/SnakierdoorCode/GAMES@main/Ports/Thats-not-my-neighbor/";
+const cdnBaseUrl = "./";
 
 function mergeFiles(fileParts) {
     return new Promise((resolve, reject) => {
