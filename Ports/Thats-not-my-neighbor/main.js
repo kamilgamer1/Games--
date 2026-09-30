@@ -37,8 +37,8 @@ function getParts(file, start, end) {
 }
 
 Promise.all([
-    mergeFiles(getParts("thats-not-my-neighbor.pck.", 1, 23)),
-    mergeFiles(getParts("thats-not-my-neighbor.wasm.", 1, 3))
+    mergeFiles(getParts("thats-not-my-neighbor.pck.part", 1, 23)),
+    mergeFiles(getParts("thats-not-my-neighbor.wasm.part", 1, 3))
 ]).then(([pckUrl, wasmUrl]) => {
     window.fetch = async function (url, ...args) {
         const urlString = typeof url === 'string' ? url : (url.url || "");
